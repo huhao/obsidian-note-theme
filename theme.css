@@ -32,8 +32,13 @@ body {
 
 body:not(.heading-indicator-off)
   :is(.markdown-rendered, .markdown-preview-view)
+<<<<<<< HEAD
   :is(h1, h2, h3, h4, h5, h6, p, ul, li) {
     font-family:'Google Sans', "LXGW WenKai", "TsangerJinKai03-W03" !important;
+=======
+  :is(h1, h2, h3, h4, h5, h6, table, blockquote, ul, li, p) {
+    font-family:'Google Sans', TsangerJinKai03 !important;
+>>>>>>> 0bb0252648036e946c56cc8c430eba19d9fbbfb6
 }
 
 a[href^="mailto:"] {
@@ -95,7 +100,6 @@ a[href^="mailto:"] {
 
 .markdown-preview-section h3 {
     -webkit-font-smoothing: antialiased;
-    font-family: "Google Sans"; 
     font-size: 1.1875em;
     font-weight: 400;
 }
