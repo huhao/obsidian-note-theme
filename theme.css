@@ -2,26 +2,30 @@
     --text-color: #555;
     --border-top-color: #222;
     --border-letf-color: #222;
+    --border-table-color: #ddd;
     --body-bg-color: #eee;
     --content-bg-color: #FFF;
     --link-color: #555;
     --link-hover-color: #222;
-    --table-border-color: #ddd;
     --table-row-odd-bg-color: #f9f9f9;
     --table-row-hover-bg-color: #f5f5f5;
     --blockquote-border-color: #d1d9e0
+    --code-background: #d4d4d4;
 }
 
 .theme-dark {
-    --text-color: #ccc;
+/*    --text-color: #ccc;*/
+    --text-color: #9b9baa;
     --border-top-color: #282b30;
     --border-left-color: #282b30;
-    --blockquote-font-color: #c2c6cf;
+    --border-table-color: #30363d;
+/*    --blockquote-font-color: #c2c6cf;*/
     --body-bg-color: #282828;
     --content-bg-color: #191B1F;
     --link-color: #ccc;
     --link-hover-color: #eee;
-    --code-background: #212429;
+/*    --code-background: #212429;*/
+    --code-background: #252526;
 }
 
 
@@ -39,6 +43,25 @@ body:not(.heading-indicator-off)
 a[href^="mailto:"] {
   pointer-events: none;
   text-decoration: none;
+}
+
+ol, p, ul {
+    line-height: 1.7;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+div[class*=language-] {
+    position: relative;
+    background-color: var(--code-background);
+    border-radius: 6px;
 }
 
 .external-link {
@@ -107,24 +130,29 @@ a[href^="mailto:"] {
 .markdown-preview-section blockquote {
   border-left: 3px solid var(--border-top-color);
   color: var(--blockquote-font-color);
-  margin: 0 0 24px;
-  padding-left: 1em;
+  margin: 1rem 0;
+  padding: .25rem 0 .25rem 1rem;
 }
 
+.markdown-preview-section code {
+    font-size: .9em;
+    padding: .25rem .5rem;
+    border-radius: 3px;
+}
 
 .markdown-preview-section table {
     border-collapse: collapse;
     width: 100%;
-    margin: 0 0 20px;
-    font-size: 14px;
+    margin: 1rem 0;
 }
 
 .markdown-preview-section th, td {
-    border: 1px solid var(--table-border-color);
+    border: 1px solid var(--border-table-color);
 }
 
 .markdown-preview-section tbody tr:nth-of-type(odd) {
   background: var(--table-row-odd-bg-color);
+/*  background-color: hsla(0, 0%, 58.8%, .1)*/
 }
 .markdown-preview-section tbody tr:hover {
   background: var(--table-row-hover-bg-color);
